@@ -1,2 +1,2 @@
 # Projects
-This includes all my frontend projects
+This includes a Netflix Clone
