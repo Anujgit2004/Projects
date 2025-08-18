@@ -1,0 +1,26 @@
+@media (max-width:600px) {
+    .head{
+    display: none;
+}
+.nav_cont{
+    width: 100%;
+    left:0;
+    padding: 0;
+    justify-content: space-around;
+}
+.logo img{
+    width: 100px;
+}
+.nav_right{
+    font-size: 15px;
+}
+.nav_right p{
+    display: none;
+}
+.nav_right input{
+    font-size: 15px;
+}
+
+
+}
+
