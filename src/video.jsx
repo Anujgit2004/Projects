@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { cards_data } from './assets/cards/Cards_data'
 import { useLocation } from 'react-router-dom'
-import back from 'C:/Users/Victus/netflix_proj/Netflix/src/assets/back_arrow_icon.png'
+import back from './assets/back_arrow_icon.png'
 import Carts from './carts';
 import { Link } from 'react-router-dom';
 export default function Video() {

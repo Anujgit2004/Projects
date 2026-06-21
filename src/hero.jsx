@@ -1,6 +1,6 @@
 import React from 'react'
-import heroban from "C:/Users/Victus/netflix_proj/Netflix/src/assets/hero_banner.jpg";
-import herotitle from "C:/Users/Victus/netflix_proj/Netflix/src/assets/hero_title.png";
+import heroban from "./assets/hero_banner.jpg";
+import herotitle from "./assets/hero_title.png";
 
 import './navbar.css';
 import './responsive.css';

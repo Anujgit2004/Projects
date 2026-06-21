@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import back from 'C:/Users/Victus/netflix_proj/Netflix/src/assets/back_arrow_icon.png'
+import back from './assets/back_arrow_icon.png'
 import './cart.css';
 export default function Headv() {
   return (

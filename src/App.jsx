@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Nav from './navbar';
@@ -7,26 +7,28 @@ import Carts from './carts';
 import Footer from './footer';
 import './App.css'
 
-
+const userContext=createContext();
 function App() {
+  
  let[active,setactive]=useState(false)
 
 return(
   <>
  
-
-  <Nav active={active}></Nav>
+<userContext.Provider value={{active,setactive}}>
+  <Nav></Nav>
   
 
  <Hero></Hero>
  
  <div className="container">
 <Carts></Carts>
-<Footer active={active}  setactive={setactive}></Footer>
+<Footer></Footer>
 </div>
-
+</userContext.Provider>
   </>
 )
 }
 
 export default App;
+export {userContext};

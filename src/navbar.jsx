@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
-import navlogo from "C:/Users/Victus/netflix_proj/Netflix/src/assets/logo.png";
-import profile from "C:/Users/Victus/netflix_proj/Netflix/src/assets/profile_img.png";
+import React, { useContext, useState } from 'react'
+import navlogo from "./assets/logo.png";
+import profile from "./assets/profile_img.png";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCaretDown, faCross, faSearch, faX } from '@fortawesome/free-solid-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import './navbar.css';
+import { userContext } from './App';
 import './responsive.css';
 
-export default function Nav({active}) {
+
+
+export default function Nav() {
+  const val=useContext(userContext);
 let [color,setcolor]=useState(false);
   document.addEventListener('scroll',()=>{
     if(window.scrollY>0){
@@ -38,7 +42,7 @@ background: "#141414",
   }
   return (
     <>
-    <div className={`nav_cont ${active?'hides':''}`} style={(color)?bgcolor:nocolor}>
+    <div className={`nav_cont ${val.active?'hides':''}`} style={(color)?bgcolor:nocolor}>
     <div className="nav_left">
 <div className="logo">
     <img src={navlogo}/>
@@ -71,7 +75,7 @@ background: "#141414",
   
 
 
-<div className={`searchbox ${active?'shows':''}`}>
+<div className={`searchbox ${val.active?'shows':''}`}>
   <input type="search" placeholder='Enter Your Search' />
   <FontAwesomeIcon icon={faSearch} className='fs-2 text-light'></FontAwesomeIcon>
 </div>
