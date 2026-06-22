@@ -32,7 +32,7 @@ fetch(`https://api.themoviedb.org/3/movie/${more}/videos?language=en-US`, option
     <>
   <Link to={'/'}><img src={back} width='50px' /></Link> 
       <div className="player">
- <iframe className='responsive-iframe' src={`https://www.youtube.com/embed/${mdata.key}`} frameBorder='0' ></iframe>
+ <iframe className='responsive-iframe' src={`https://www.youtube.com/embed/${mdata?.key}`} frameBorder='0' ></iframe>
       </div>
    
     </>
