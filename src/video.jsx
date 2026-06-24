@@ -8,14 +8,14 @@ export default function Video() {
   let show=useLocation();
    console.log(show)
   let more=show.pathname.split('/')[2];
- 
+ let auth=import.meta.env.VITE_AUTHORISATION;
  let [mdata,setdmdata]=useState([])
 console.log(mdata)
   const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMjYxMWRhMjU5NjZhMmJkZGI4YjdkMjkyNzk5MWNjOCIsIm5iZiI6MTc1NDgwMTI3OS43NjksInN1YiI6IjY4OTgyNDdmY2E3Y2U5ZDNlYjJjMGRlZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xTWorx0wbBgl3s25TUpC_uZSJz4tqSl3Wz9JAYsTKfI'
+    Authorization: auth
   }
 };
 

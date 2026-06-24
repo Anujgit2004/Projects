@@ -22,11 +22,13 @@ useEffect(()=>{
 },[])
 
  let [con,setcon]=useState([]);
+ 
+let A_key=import.meta.env.VITE_API_KEY;
 
 useEffect(()=>{
   getdata.map((v,key)=>{
     return(
-  fetch(`https://api.themoviedb.org/3/movie/${v.http}?api_key=f2611da25966a2bddb8b7d2927991cc8&language=en-US&page=1`)
+  fetch(`https://api.themoviedb.org/3/movie/${v.http}?api_key=${A_key}&language=en-US&page=1`)
 .then((res)=>res.json()).then((dat)=>{
   setcon((pro)=>[...pro,dat.results])
 
